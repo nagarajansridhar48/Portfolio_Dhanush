@@ -20,7 +20,7 @@ mongoose
   .catch((err) => console.error("MongoDB Error:", err));
 
 // Routes
-app.use("/api/contact", contactRoutes);
+app.use("/sentmessage", contactRoutes);
 
 // Error Handling Middleware
 app.use(errorHandler);
