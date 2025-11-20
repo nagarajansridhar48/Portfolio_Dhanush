@@ -34,17 +34,17 @@ const sendMessage = async (req, res, next) => {
     });
 
     // Confirmation email to sender
-    await transporter.sendMail({
-      from: `"Dhanush Portfolio" <${process.env.EMAIL_USER}>`,
-      to: email,
-      subject: "Thanks for contacting me!",
-      html: `
-        <p>Hi ${name},</p>
-        <p>Thank you for reaching out! I’ve received your message and will get back to you shortly.</p>
-        <br>
-        <p>Best regards,<br><strong>Dhanush M</strong></p>
-      `,
-    });
+    // await transporter.sendMail({
+    //   from: `"Dhanush Portfolio" <${process.env.EMAIL_USER}>`,
+    //   to: email,
+    //   subject: "Thanks for contacting me!",
+    //   html: `
+    //     <p>Hi ${name},</p>
+    //     <p>Thank you for reaching out! I’ve received your message and will get back to you shortly.</p>
+    //     <br>
+    //     <p>Best regards,<br><strong>Dhanush M</strong></p>
+    //   `,
+    // });
 
     res.status(200).json({ success: true, message: "Message sent successfully" });
   } catch (error) {
