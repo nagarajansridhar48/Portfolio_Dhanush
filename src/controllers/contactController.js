@@ -49,7 +49,7 @@ const sendMessage = async (req, res, next) => {
 
     res.status(200).json({ success: true, message: "Message sent successfully" });
   } catch (error) {
-    next(error);
+    res.status(500).json(error);
   }
 };
 
