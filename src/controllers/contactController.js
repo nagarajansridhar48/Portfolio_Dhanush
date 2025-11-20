@@ -10,7 +10,6 @@ const sendMessage = async (req, res, next) => {
     }
 
     // Save message to database
-    const newMessage = await Message.create({ name, email, message });
 
     // Email transport config
     const transporter = nodemailer.createTransport({
